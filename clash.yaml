@@ -17,16 +17,116 @@ proxies:
     public-key: -13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns
     short-id: da12e31124830d42
   skip-cert-verify: true
+- name: NODE-02-45.76.222.108
+  type: vless
+  server: 45.76.222.108
+  port: 443
+  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
+    short-id: b5c85d2d
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-03-198.13.53.39
+  type: vless
+  server: 198.13.53.39
+  port: 443
+  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
+    short-id: 7a7cc838
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-04-139.162.101.74
+  type: vless
+  server: 139.162.101.74
+  port: 443
+  uuid: 1e709d98-d4c3-45c1-bdcc-4268cf83eff8
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jd8UNLpim43LVV-iEzIXlUgTVuvi9Pf7E0kgQb3o0CI
+    short-id: 7e1e09f4
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-05-172.104.86.181
+  type: vless
+  server: 172.104.86.181
+  port: 443
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
+    short-id: c8559ca1
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-06-139.162.20.241
+  type: vless
+  server: 139.162.20.241
+  port: 443
+  uuid: 7f0270f9-1abc-4c4f-960d-0a23e32f1eb8
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fG1u2AZj5pgSNWO3MBmkoY6K61xBwnuYX3_z1fSeR0o
+    short-id: 640c807d
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - AUTO
   - NODE-01-116.213.43.43
+  - NODE-02-45.76.222.108
+  - NODE-03-198.13.53.39
+  - NODE-04-139.162.101.74
+  - NODE-05-172.104.86.181
+  - NODE-06-139.162.20.241
 - name: AUTO
   type: url-test
   proxies:
   - NODE-01-116.213.43.43
+  - NODE-02-45.76.222.108
+  - NODE-03-198.13.53.39
+  - NODE-04-139.162.101.74
+  - NODE-05-172.104.86.181
+  - NODE-06-139.162.20.241
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
