@@ -3,41 +3,59 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: NODE-01-154.31.114.162
+- name: NODE-01-139.162.101.74
   type: vless
-  server: 154.31.114.162
-  port: 8443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  server: 139.162.101.74
+  port: 443
+  uuid: 1e709d98-d4c3-45c1-bdcc-4268cf83eff8
   udp: true
   network: ws
   tls: true
-  servername: jp3.yohototo.top
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-  skip-cert-verify: true
-- name: NODE-02-139.162.27.96
-  type: vless
-  server: 139.162.27.96
-  port: 443
-  uuid: f1178fbe-1420-4eef-b087-4f33b32b4a19
-  udp: true
-  tls: true
-  servername: aka.ms
-  skip-cert-verify: true
-- name: NODE-03-103.106.229.37
-  type: vless
-  server: 103.106.229.37
-  port: 21001
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  udp: true
-  tls: true
-  servername: www.cloudflare.com
+  servername: itunes.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: ab39fc68ab3dee81
+    public-key: jd8UNLpim43LVV-iEzIXlUgTVuvi9Pf7E0kgQb3o0CI
+    short-id: 7e1e09f4
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-02-172.104.86.181
+  type: vless
+  server: 172.104.86.181
+  port: 443
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
+    short-id: c8559ca1
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-03-45.76.222.108
+  type: vless
+  server: 45.76.222.108
+  port: 443
+  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
+    short-id: b5c85d2d
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
   skip-cert-verify: true
 - name: NODE-04-198.13.53.39
   type: vless
@@ -57,72 +75,7 @@ proxies:
     headers:
       Host: itunes.apple.com
   skip-cert-verify: true
-- name: NODE-05-139.162.27.96
-  type: vless
-  server: 139.162.27.96
-  port: 2096
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  udp: true
-  network: ws
-  tls: true
-  servername: free-server.techsonic.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-  skip-cert-verify: true
-- name: NODE-06-45.76.222.108
-  type: vless
-  server: 45.76.222.108
-  port: 443
-  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
-    short-id: b5c85d2d
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-  skip-cert-verify: true
-- name: NODE-07-5.34.177.164
-  type: vless
-  server: 5.34.177.164
-  port: 443
-  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
-    short-id: b2efed6d157e7bb0
-  skip-cert-verify: true
-- name: NODE-08-172.104.86.181
-  type: vless
-  server: 172.104.86.181
-  port: 443
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: c8559ca1
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-  skip-cert-verify: true
-- name: NODE-09-116.213.43.43
+- name: NODE-05-116.213.43.43
   type: vless
   server: 116.213.43.43
   port: 11106
@@ -136,32 +89,44 @@ proxies:
     public-key: -13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns
     short-id: da12e31124830d42
   skip-cert-verify: true
+- name: NODE-06-139.162.20.241
+  type: vless
+  server: 139.162.20.241
+  port: 443
+  uuid: 7f0270f9-1abc-4c4f-960d-0a23e32f1eb8
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fG1u2AZj5pgSNWO3MBmkoY6K61xBwnuYX3_z1fSeR0o
+    short-id: 640c807d
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - AUTO
-  - NODE-01-154.31.114.162
-  - NODE-02-139.162.27.96
-  - NODE-03-103.106.229.37
+  - NODE-01-139.162.101.74
+  - NODE-02-172.104.86.181
+  - NODE-03-45.76.222.108
   - NODE-04-198.13.53.39
-  - NODE-05-139.162.27.96
-  - NODE-06-45.76.222.108
-  - NODE-07-5.34.177.164
-  - NODE-08-172.104.86.181
-  - NODE-09-116.213.43.43
+  - NODE-05-116.213.43.43
+  - NODE-06-139.162.20.241
 - name: AUTO
   type: url-test
   proxies:
-  - NODE-01-154.31.114.162
-  - NODE-02-139.162.27.96
-  - NODE-03-103.106.229.37
+  - NODE-01-139.162.101.74
+  - NODE-02-172.104.86.181
+  - NODE-03-45.76.222.108
   - NODE-04-198.13.53.39
-  - NODE-05-139.162.27.96
-  - NODE-06-45.76.222.108
-  - NODE-07-5.34.177.164
-  - NODE-08-172.104.86.181
-  - NODE-09-116.213.43.43
+  - NODE-05-116.213.43.43
+  - NODE-06-139.162.20.241
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
