@@ -11,6 +11,7 @@ proxies:
   udp: true
   tls: true
   servername: aka.ms
+  skip-cert-verify: true
 - name: SG-02-5.34.177.164-70ms
   type: vless
   server: 5.34.177.164
@@ -24,6 +25,7 @@ proxies:
   reality-opts:
     public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
     short-id: b2efed6d157e7bb0
+  skip-cert-verify: true
 - name: JP-01-45.76.98.127-71ms
   type: vless
   server: 45.76.98.127
@@ -41,6 +43,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
+  skip-cert-verify: true
 - name: SG-03-206.206.76.75-72ms
   type: vless
   server: 206.206.76.75
@@ -54,6 +57,7 @@ proxies:
   reality-opts:
     public-key: gSHylaTvEzWj19Bk-zLHXKYUINGWVmo_ybCiD2CRinE
     short-id: a775360a48ef5cfb
+  skip-cert-verify: true
 - name: JP-02-43.170.8.95-74ms
   type: vless
   server: 43.170.8.95
@@ -68,6 +72,7 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
+  skip-cert-verify: true
 - name: SG-04-172.237.88.103-74ms
   type: vless
   server: 172.237.88.103
@@ -81,6 +86,7 @@ proxies:
   reality-opts:
     public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
     short-id: 5a42dbd7e26a0415
+  skip-cert-verify: true
 - name: JP-03-31.76.91.31-74ms
   type: vless
   server: 31.76.91.31
@@ -93,12 +99,14 @@ proxies:
   client-fingerprint: qq
   grpc-opts:
     grpc-service-name: grpc
+  skip-cert-verify: true
 - name: JP-04-137.220.221.179-75ms
   type: vless
   server: 137.220.221.179
   port: 443
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
   udp: true
+  skip-cert-verify: true
 - name: JP-05-172.104.86.181-75ms
   type: vless
   server: 172.104.86.181
@@ -116,6 +124,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
+  skip-cert-verify: true
 - name: SG-05-43.174.247.63-76ms
   type: vless
   server: 43.174.247.63
@@ -130,6 +139,7 @@ proxies:
     path: /51544/ws
     headers:
       Host: ded1ws.samcdn.shop
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
