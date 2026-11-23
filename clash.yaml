@@ -3,7 +3,21 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: SG-01-139.162.27.96-69ms
+- name: NODE-01-154.31.114.162
+  type: vless
+  server: 154.31.114.162
+  port: 8443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  network: ws
+  tls: true
+  servername: jp3.yohototo.top
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+  skip-cert-verify: true
+- name: NODE-02-139.162.27.96
   type: vless
   server: 139.162.27.96
   port: 443
@@ -12,7 +26,71 @@ proxies:
   tls: true
   servername: aka.ms
   skip-cert-verify: true
-- name: SG-02-5.34.177.164-70ms
+- name: NODE-03-103.106.229.37
+  type: vless
+  server: 103.106.229.37
+  port: 21001
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: ab39fc68ab3dee81
+  skip-cert-verify: true
+- name: NODE-04-198.13.53.39
+  type: vless
+  server: 198.13.53.39
+  port: 443
+  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
+    short-id: 7a7cc838
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-05-139.162.27.96
+  type: vless
+  server: 139.162.27.96
+  port: 2096
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  udp: true
+  network: ws
+  tls: true
+  servername: free-server.techsonic.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+  skip-cert-verify: true
+- name: NODE-06-45.76.222.108
+  type: vless
+  server: 45.76.222.108
+  port: 443
+  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
+  udp: true
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
+    short-id: b5c85d2d
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+  skip-cert-verify: true
+- name: NODE-07-5.34.177.164
   type: vless
   server: 5.34.177.164
   port: 443
@@ -26,88 +104,7 @@ proxies:
     public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
     short-id: b2efed6d157e7bb0
   skip-cert-verify: true
-- name: JP-01-45.76.98.127-71ms
-  type: vless
-  server: 45.76.98.127
-  port: 443
-  uuid: 18ce1302-4e37-4eac-bd4f-e3e0a983e589
-  udp: true
-  network: ws
-  tls: true
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI
-    short-id: 49fa0dad
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-  skip-cert-verify: true
-- name: SG-03-206.206.76.75-72ms
-  type: vless
-  server: 206.206.76.75
-  port: 443
-  uuid: 32cf52f4-b8d2-4ed5-a37c-0d0a8e743309
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: gSHylaTvEzWj19Bk-zLHXKYUINGWVmo_ybCiD2CRinE
-    short-id: a775360a48ef5cfb
-  skip-cert-verify: true
-- name: JP-02-43.170.8.95-74ms
-  type: vless
-  server: 43.170.8.95
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  network: ws
-  tls: true
-  servername: jp3.yohototo.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-  skip-cert-verify: true
-- name: SG-04-172.237.88.103-74ms
-  type: vless
-  server: 172.237.88.103
-  port: 443
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: zoom.us
-  client-fingerprint: random
-  reality-opts:
-    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
-    short-id: 5a42dbd7e26a0415
-  skip-cert-verify: true
-- name: JP-03-31.76.91.31-74ms
-  type: vless
-  server: 31.76.91.31
-  port: 443
-  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
-  udp: true
-  network: grpc
-  tls: true
-  servername: b.jp-1.bnc-gt.co.uk
-  client-fingerprint: qq
-  grpc-opts:
-    grpc-service-name: grpc
-  skip-cert-verify: true
-- name: JP-04-137.220.221.179-75ms
-  type: vless
-  server: 137.220.221.179
-  port: 443
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-  udp: true
-  skip-cert-verify: true
-- name: JP-05-172.104.86.181-75ms
+- name: NODE-08-172.104.86.181
   type: vless
   server: 172.104.86.181
   port: 443
@@ -125,49 +122,46 @@ proxies:
     headers:
       Host: itunes.apple.com
   skip-cert-verify: true
-- name: SG-05-43.174.247.63-76ms
+- name: NODE-09-116.213.43.43
   type: vless
-  server: 43.174.247.63
-  port: 443
-  uuid: 024cf4e8-fa64-44ea-b22f-c28437120563
+  server: 116.213.43.43
+  port: 11106
+  uuid: 2e7bd251-52be-4ffa-b79e-108e1fe07185
   udp: true
-  network: ws
   tls: true
-  servername: msydjt.com
+  flow: xtls-rprx-vision
+  servername: www.apple.com
   client-fingerprint: chrome
-  ws-opts:
-    path: /51544/ws
-    headers:
-      Host: ded1ws.samcdn.shop
+  reality-opts:
+    public-key: -13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns
+    short-id: da12e31124830d42
   skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - AUTO
-  - SG-01-139.162.27.96-69ms
-  - SG-02-5.34.177.164-70ms
-  - JP-01-45.76.98.127-71ms
-  - SG-03-206.206.76.75-72ms
-  - JP-02-43.170.8.95-74ms
-  - SG-04-172.237.88.103-74ms
-  - JP-03-31.76.91.31-74ms
-  - JP-04-137.220.221.179-75ms
-  - JP-05-172.104.86.181-75ms
-  - SG-05-43.174.247.63-76ms
+  - NODE-01-154.31.114.162
+  - NODE-02-139.162.27.96
+  - NODE-03-103.106.229.37
+  - NODE-04-198.13.53.39
+  - NODE-05-139.162.27.96
+  - NODE-06-45.76.222.108
+  - NODE-07-5.34.177.164
+  - NODE-08-172.104.86.181
+  - NODE-09-116.213.43.43
 - name: AUTO
   type: url-test
   proxies:
-  - SG-01-139.162.27.96-69ms
-  - SG-02-5.34.177.164-70ms
-  - JP-01-45.76.98.127-71ms
-  - SG-03-206.206.76.75-72ms
-  - JP-02-43.170.8.95-74ms
-  - SG-04-172.237.88.103-74ms
-  - JP-03-31.76.91.31-74ms
-  - JP-04-137.220.221.179-75ms
-  - JP-05-172.104.86.181-75ms
-  - SG-05-43.174.247.63-76ms
+  - NODE-01-154.31.114.162
+  - NODE-02-139.162.27.96
+  - NODE-03-103.106.229.37
+  - NODE-04-198.13.53.39
+  - NODE-05-139.162.27.96
+  - NODE-06-45.76.222.108
+  - NODE-07-5.34.177.164
+  - NODE-08-172.104.86.181
+  - NODE-09-116.213.43.43
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
